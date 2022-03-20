@@ -2,75 +2,51 @@
 <html lang="en">
 
 <head>
-  <title>Laravel 9 CRUD Application @yield('title')</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
+    <title>Laravel 9 CRUD Application @yield('title')</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/logo.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/sass/app.css') }}">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container">
+            <a class="navbar-brand" href="#"><img class="logo2" src="{{ asset('images/download.png') }}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active" href="posts">Home</a>
-                    <a class="nav-item nav-link" href="row workspace">about</a>
-                    <a class="nav-item nav-link" href="#">project</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">
 
-                  
-                    </a>
-                </div>
-            </div>
-        </div>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav mr-auto ">
+                            <a class="nav-item nav-link active" href="posts">Home</a>
+                            <a class="nav-item nav-link" href="row workspace">about</a>
+                            <a class="nav-item nav-link" href="#">project</a>
+
+
+
+
+                        </div>
+                    </div>
     </nav>
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">STMIK AMIK BANDUNG<br> <img class="logo"
-                src="{{ asset('images/download.png') }}">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">STMIK AMIK BANDUNG<br> <img class="logo"
+                    src="{{ asset('images/download.png') }}">
+        </div>
     </div>
-</div>
-<div class="container">
 
-        {{-- info panel content terbaik--}}
-        <div class="row justify-content-center">
-            <div class="info-panel col-12 ">
-                <div class="row">
-              
-                   
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        
-            
-      
-              
-    
-      <div class="row justify-content-center">
-            <div class="card">
-        <div class="card-header">
-          Featured
-        </div>
-        
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-</div>
-      </div>
-
-
+    <div class="container py-5">
+        @yield('content')
+    </div>
 
     {{-- bagian footer --}}
     <!-- Footer -->
